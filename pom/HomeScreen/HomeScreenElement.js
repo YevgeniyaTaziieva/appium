@@ -11,3 +11,17 @@ class HomeScreen{
 }
 
 module.exports = new HomeScreen()
+
+class AnnimationScreen{
+    get annimationBtn(){
+        return $(`//android.widget.TextView[@content-desc="Animation"]`)
+    }
+    get eventsBtn(){
+        return $(`//android.widget.TextView[@content-desc="Events"]`)
+    }
+    get controlPanel (){
+        return $(`//android.widget.LinearLayout[@resource-id="io.appium.android.apis:id/container"]/android.widget.LinearLayout[1]`)
+    }
+}
+
+module.exports = new AnnimationScreen()

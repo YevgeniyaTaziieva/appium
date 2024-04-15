@@ -1,4 +1,6 @@
 const HomeScreenElements = require("./HomeScreenElement")
+const AnnimationScreenElements = require("./HomeScreenElement")
+
 
 class HomeScreen{
     async openAccessibilityTab(){
@@ -8,3 +10,12 @@ class HomeScreen{
     }
 }
 module.exports = new HomeScreen()
+
+class AnnimationScreen{
+    async openAnnimationTab(){
+        await AnnimationScreenElements.annimationBtn.click()
+        await AnnimationScreenElements.eventsBtn.click()
+        await expect(await AnnimationScreenElements.controlPanel).toBeDisplayed()
+    }
+}
+module.exports = new AnnimationScreen()
